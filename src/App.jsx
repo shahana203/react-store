@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, BrowserRouter, HashRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProductDetails from "./components/ProductDetails";
 import ProductList from "./components/ProductList";
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     
-    <HashRouter>
+    <BrowserRouter basename="/react-store">
     <div className="container mt-4">
       
       <Routes>
@@ -17,7 +17,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
     </div>
-    </HashRouter>
+    </BrowserRouter>
     
     </>
   );
